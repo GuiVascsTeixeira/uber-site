@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Frete Moto | Calcule pelo CEP</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topo">
+    <span class="logo">Frete<span>Moto</span></span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Descubra quanto custa o frete de moto até o seu CEP.</h1>
+      <p>Digite o CEP e veja o endereço, a distância a partir da Uninassau Parangaba e o valor estimado da corrida.</p>
+    </section>
+
+    <section class="calculadora">
+      <form id="form-cep">
+        <label for="cep">CEP de destino</label>
+        <div class="campo">
+          <input type="text" id="cep" inputmode="numeric" maxlength="9" placeholder="Ex.: 60744-390" value="60744390" required>
+          <button type="submit" id="botao">Calcular frete</button>
+        </div>
+      </form>
+
+      <p id="mensagem" class="mensagem" role="status"></p>
+
+      <div id="resultado" class="resultado" hidden>
+        <h2>Resultado</h2>
+
+        <dl>
+          <div>
+            <dt>Origem</dt>
+            <dd>Uninassau Parangaba, Rua Germano Franck, 613</dd>
+          </div>
+          <div>
+            <dt>Destino</dt>
+            <dd id="destino"></dd>
+          </div>
+          <div>
+            <dt>Distância estimada</dt>
+            <dd id="distancia"></dd>
+          </div>
+          <div>
+            <dt>Tempo estimado</dt>
+            <dd id="tempo"></dd>
+          </div>
+        </dl>
+
+        <div class="preco-caixa">
+          <span>Valor do frete (Uber Moto)</span>
+          <strong id="preco"></strong>
+        </div>
+
+        <p class="aviso">Valor fictício, calculado só para este trabalho: R$ 4,00 de taxa inicial + R$ 1,90 por km + R$ 1,50 de taxa de serviço, com mínimo de R$ 7,00. A distância é uma estimativa por rua, não a rota exata do GPS.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>&copy; 2026 FreteMoto. Projeto da faculdade. Dados: ViaCEP e OpenStreetMap.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
